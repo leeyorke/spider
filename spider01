@@ -37,13 +37,14 @@ class Spider(object): # 定义一个爬虫类(爬虫脚本)
 
 
 def main():
-	y=0
-	urlpool = ['https://book.douban.com/top250?start=', y]
+	#y=0
+	#urlpool = ['https://book.douban.com/top250?start=', y]
 	pattern = 'title="(.*)"'
 	path = 'D:/r/book.txt'
 	for x in range(0,250,25):
-		urlpool[1] = x
-		url=''.join('%s' % y for y in urlpool)
+		#urlpool[1] = x
+		#url=''.join('%s' % y for y in urlpool)
+		url = 'https://book.douban.com/top250?start='+str(x)
 		print(url)
 		s = Spider()
 		s.spider(url, pattern)
