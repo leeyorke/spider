@@ -1,3 +1,6 @@
+## 一个爬虫脚本
+
+``` python
 import urllib.request
 import re
 '''
@@ -13,7 +16,7 @@ class Spider(object): # 定义一个爬虫类(爬虫脚本)
 	def spider(self, url, pattern): # 爬虫与数据清洗
 		self.url = url
 		self.pattern = pattern
-		req = urllib.request.urlopen(self.url, timeout=2).read().decode('utf-8','ignore')
+		req = urllib.request.urlopen(self.url,timeout=2).read().decode('utf-8','ignore')
 		#pat = pattern
 		self.rst = re.compile(self.pattern).findall(req)
 		for k in self.rst:
@@ -56,8 +59,8 @@ def main():
 if __name__ == '__main__':
 	index = 1
 	main()
+```
 
-'''
 疑问与总结：
 1.如果要在方法里面使用全局变量，为何定义在 if main 函数里面才有效？
 2.global关键字的意义
@@ -66,4 +69,3 @@ if __name__ == '__main__':
 5.join()函数连接数字与字符串时该怎么实现？
 6.元组值不可更改
 7.文件索引变量定义为类属性能否实现文件自动编号功能？
-'''
