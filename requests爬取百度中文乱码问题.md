@@ -43,5 +43,6 @@ rst = res_xpath.xpath('//title/text()')
 print(rst)
 ```
 ![输出结果](./images/1573801941407.png)
+
 参考链接：
 [Python模块Requests的中文乱码问题](https://www.cnblogs.com/sheng-247/p/7686014.html)
