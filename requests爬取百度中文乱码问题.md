@@ -1,4 +1,4 @@
-==解决requests爬取百度中文乱码问题==
+# requests爬取百度中文乱码问题
 
  1. 方法一
 
@@ -21,7 +21,7 @@ rst = res_xpath.xpath('//title/text()')
 print(rst)
 ```
 
-![requests默认编码](./images/1573800800469.png)
+![输出结果](./images/1573801941407.png)
 
  1. 方法二
 
@@ -43,3 +43,5 @@ rst = res_xpath.xpath('//title/text()')
 print(rst)
 ```
 ![输出结果](./images/1573801941407.png)
+参考链接：
+[Python模块Requests的中文乱码问题](https://www.cnblogs.com/sheng-247/p/7686014.html)
